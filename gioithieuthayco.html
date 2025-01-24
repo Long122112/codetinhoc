@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #D2D2D2;
+            background-image:
+            repeating-linear-gradient(
+                to right, transparent 0 100px,
+                #25283b22 100px 101px
+            ),
+            repeating-linear-gradient(
+                to bottom, transparent 0 100px,
+                #25283b22 100px 101px
+            );
+        }
+        
+        body::before{
+            position: absolute;
+            width: min(1400px, 90vw);
+            top: 10%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+            content: '';
+            background-image: url(images/bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            pointer-events: none;
+        }
+    </style>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <div class="banner">
+        <div class="slider" style="--quantity: 22">
+            <div class="item" style="--position: 1"><img src="images/thaynghia.jpg" alt=""><div class="item-text">Thầy Nguyễn Tuấn Nghĩa</div></div>
+            <div class="item" style="--position: 2"><img src="images/thayquoc.jpg" alt=""><div class="item-text">Thầy Trần Võ Nam Quốc</div></div>
+            <div class="item" style="--position: 3"><img src="images/conhi.png" alt=""><div class="item-text">Cô Phạm Thị Nhị</div></div>
+            <div class="item" style="--position: 4"><img src="images/cooanh.jpg" alt=""><div class="item-text">Cô Lê Ngọc Như Oanh</div></div>
+            <div class="item" style="--position: 5"><img src="images/thaythang.jpg" alt=""><div class="item-text">Thầy Phạm Quốc Thắng</div></div>
+            <div class="item" style="--position: 6"><img src="images/colien.jpg" alt=""><div class="item-text">Cô Nguyễn Thị Ngọc Liên</div></div>
+            <div class="item" style="--position: 7"><img src="images/thaykhang.jpg" alt=""><div class="item-text">Thầy Nguyễn Duy Khang</div></div>
+            <div class="item" style="--position: 8"><img src="images/thaytrang.jpg" alt=""><div class="item-text">Thầy Phạm Quang Trang</div></div>
+            <div class="item" style="--position: 9"><img src="images/thaykhoa.png" alt=""><div class="item-text">Thầy Lê Phan Đăng Khoa</div></div>
+            <div class="item" style="--position: 10"><img src="images/cohien.png" alt=""><div class="item-text">Cô Võ Đạo Hiền</div></div>
+            <div class="item" style="--position: 11"><img src="images/dragon_10.jpg" alt=""><div class="item-text">Thầy Võ Viết Tình</div></div>
+            <div class="item" style="--position: 12"><img src="images/colan.jpg" alt=""><div class="item-text">Cô Nguyễn Thị Tuyết Lan</div></div>
+            <div class="item" style="--position: 13"><img src="images/thaytri.jpg" alt=""><div class="item-text">Thầy Nguyễn Nhân Trí</div></div>
+            <div class="item" style="--position: 14"><img src="images/cokhanh.jpg" alt=""><div class="item-text">Cô Dương Ngọc Minh Khánh</div></div>
+            <div class="item" style="--position: 15"><img src="images/codao.jpg" alt=""><div class="item-text">Cô Bùi Thị Đào</div></div>
+            <div class="item" style="--position: 16"><img src="images/cothuong.jpg" alt=""><div class="item-text">Cô Huỳnh Thị MộngThường</div></div>
+            <div class="item" style="--position: 17"><img src="images/thayluan.png" alt=""><div class="item-text">Thầy Hà Minh Luân</div></div>
+            <div class="item" style="--position: 18"><img src="images/comen.jpg" alt=""><div class="item-text">Cô Trần Thị Triều Mến</div></div>
+            <div class="item" style="--position: 19"><img src="images/dragon_10.jpg" alt=""><div class="item-text">Thầy Nguyễn Thanh Sơn</div></div>
+            <div class="item" style="--position: 20"><img src="images/cochi.jpg" alt=""><div class="item-text">Cô Lan Chi</div></div>
+            <div class="item" style="--position: 21"><img src="images/cobinh.png" alt=""><div class="item-text">Cô Hoàng Hải Bình</div></div>
+            <div class="item" style="--position: 22"><img src="images/comai.png" alt=""><div class="item-text">Cô Uông Thị Mai</div></div>
+
+
+
+        </div>
+        <div class="content">
+            <h1 data-content="A3-k27's teachers ">
+                A3-k27's teachers
+            </h1>
+            <div class="author">
+                <h2>Lời Ngỏ</h2>
+                <p><b>Hồi ức</b></p>
+                <p>
+                    Thời gian trôi thật nhanh. Đúng là không thể lấy cái vô hạn của thời gian để so với cái hữu hạn của đời người, hay ở đây là đời học sinh. Cám ơn thầy cô đã giúp chúng em trưởng thành hơn, rồi mai đây, khi 10 năm, 15 năm hay xa hơn nhìn lại, đó sẽ là những mảnh kí ức thật đẹp.
+                </p>
+            </div>
+            <div class="model"></div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="CSS/stylenut.css">
+    <button id="playButton">Bật âm thanh</button>
+
+<audio id="myAudio" hidden>
+    <source src="music/nhacnen.mp3" type="audio/mpeg">
+    <source src="music/nhacnen.ogg" type="audio/ogg">
+    Trình duyệt của bạn không hỗ trợ thẻ audio.
+</audio>
+
+<script>
+    const playButton = document.getElementById('playButton');
+        const myAudio = document.getElementById('myAudio');
+        let isPlaying = false; // Biến để theo dõi trạng thái phát nhạc
+
+        playButton.addEventListener('click', () => {
+            if (isPlaying) {
+                // Nếu đang phát, thì dừng nhạc
+                myAudio.pause();
+                isPlaying = false;
+                playButton.textContent = "Bật âm thanh"; // Thay đổi nội dung nút
+            } else {
+                // Nếu đang dừng, thì phát nhạc
+                myAudio.play();
+                isPlaying = true;
+                playButton.textContent = "Tắt âm thanh"; // Thay đổi nội dung nút
+            }
+        });
+</script>
+</body>
+</html>

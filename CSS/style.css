@@ -1,0 +1,150 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider{
+    position: absolute;
+    width: 100px;
+    height: 125px;
+    top: 10%;
+    left: calc(50% - 50px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 40s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-15deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-15deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+    display: flex; /* Để căn chỉnh chữ */
+     flex-direction: column; /* Bố trí theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.banner .slider .item .item-text { /* CSS cho phần chữ */
+    width: -100%; /* Chiều rộng bằng với ảnh */
+    text-align: center; /* Căn giữa chữ */
+    color: white;
+    font-size: 0.7em; /* Điều chỉnh kích thước chữ */
+    font-family: Montserrat;
+    font-weight: bold;
+    padding: 10px 0; /* Thêm padding trên và dưới */
+    box-sizing: border-box; /* Để padding không làm thay đổi kích thước tổng thể */
+    text-shadow: 1px 5px 3px #000000;
+    white-space: nowrap;
+
+}
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.banner .content h1{
+    font-family: 'ICA Rubrik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+
+}
+.banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+.banner .content .author{
+    font-family: Montserrat;
+    text-align: right;
+    max-width: 300px;
+}
+.banner .content h2{
+    font-size: 3em;
+}
+.banner .content .model{
+    background-image: url(images/caheo.png);
+    width: 100%;
+    height: 110vh;
+    position: absolute;
+    bottom: -3;
+    left: 0;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+@media screen and (max-width: 1023px) {
+    .banner .slider{
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
+    }
+    .banner .content h1{
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 7em;
+    }
+    .banner .content .author{
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #000;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .banner .slider{
+        width: 100px;
+        height: 150px;
+        left: calc(50% - 50px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(180px);
+    }
+    .banner .content h1{
+        font-size: 5em;
+    }
+}
